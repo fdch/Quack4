@@ -1,0 +1,115 @@
+#N canvas 527 49 701 507 10;
+#X symbolatom 88 221 30 0 0 2 - server-set server;
+#X symbolatom 47 95 10 0 0 2 - call-name-1-set call-name-1;
+#X symbolatom 47 135 10 0 0 2 - call-name-2-set call-name-2;
+#X obj 28 221 tgl 50 0 onoff onoff-set empty 35 15 0 12 -204786 -1
+-1 0 1;
+#X obj 145 135 tgl 15 0 status-2 status-2-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 88 255 bng 15 250 50 0 store store-set empty 17 7 0 10 -262144
+-1 -1;
+#X obj 162 135 nbx 3 15 0 999 0 0 call-2-fifo call-2-fifo-set empty
+0 -8 0 12 -262144 -1 -1 40 256;
+#X obj 145 95 tgl 15 0 status-1 status-1-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 162 95 nbx 3 15 0 999 0 0 call-1-fifo call-1-fifo-set empty
+0 -8 0 12 -262144 -1 -1 34 256;
+#X symbolatom 47 175 10 0 0 2 - call-name-3-set call-name-3;
+#X obj 145 175 tgl 15 0 status-3 status-3-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 162 175 nbx 3 15 0 999 0 0 call-3-fifo call-3-fifo-set empty
+0 -8 0 12 -262144 -1 -1 59 256;
+#X obj 127 95 bng 15 250 50 0 call-1-found call-1-found-set empty 17
+7 0 10 -262144 -1 -1;
+#X obj 127 135 bng 15 250 50 0 call-2-found call-2-found-set empty
+17 7 0 10 -262144 -1 -1;
+#X obj 127 175 bng 15 250 50 0 call-3-found call-3-found-set empty
+17 7 0 10 -262144 -1 -1;
+#X obj 21 330 text define -k names;
+#A set call-name-1-set symbol mf \; call-name-2-set symbol mj \; call-1-fifo-set
+34 \; call-2-fifo-set 40 \; call-3-fifo-set 59 \; call-name-3-set symbol
+mo \; nchan-1-set 2 \; nchan-2-set 2 \; nchan-3-set 2 \; block-1-set
+0 \; block-2-set 0 \; block-3-set 0 \; 2x-3-set 0 \; 2x-2-set 0 \;
+2x-1-set 0 \; server-set symbol foo.ucsd.edu \;;
+#X obj 21 362 text define size;
+#X text 114 46 status;
+#X text 164 46 fifo;
+#N canvas 0 22 450 300 store 0;
+#X obj 58 76 f \$0;
+#X obj 58 102 makefilename %d-guts;
+#X msg 58 128 \; \$1 menusave;
+#X obj 58 44 r store;
+#X msg 223 204 line 0 \, auto;
+#X obj 223 230 text sequence names -g;
+#X obj 223 178 loadbang;
+#X text 239 143 'recall';
+#X obj 256 40 r recall;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 8 0 4 0;
+#X restore 264 298 pd store;
+#N canvas 0 22 450 300 onoff 0;
+#X obj 76 17 r onoff;
+#X obj 197 105 sel 1;
+#X obj 197 131 t b b;
+#X obj 279 136 s server-set;
+#X obj 196 163 _qsize size;
+#X obj 40 123 _qsize size;
+#X msg 36 221 \; call-\$1-onoff \$2;
+#X msg 198 229 \; call-name-\$1-set bang \;;
+#X obj 76 51 t f f;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 3 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 8 0 5 0;
+#X connect 8 1 1 0;
+#X restore 264 330 pd onoff;
+#X obj 21 394 clone -s 1 quack2~ 3 1 2 1 2;
+#X obj 21 298 namecanvas \$0-guts;
+#X obj 211 95 hradio 15 1 0 3 nchan-1 nchan-1-set empty 0 -8 0 10 -262144
+-1 -1 2;
+#X obj 280 95 hradio 15 1 0 3 block-1 block-1-set empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 350 95 tgl 15 0 2x-1 2x-1-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 211 46 chnls;
+#X text 347 46 2X;
+#X text 212 64 0|1|2;
+#X text 266 64 64|128|256;
+#X obj 211 135 hradio 15 1 0 3 nchan-2 nchan-2-set empty 0 -8 0 10
+-262144 -1 -1 2;
+#X obj 280 135 hradio 15 1 0 3 block-2 block-2-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 350 135 tgl 15 0 2x-2 2x-2-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 211 175 hradio 15 1 0 3 nchan-3 nchan-3-set empty 0 -8 0 10
+-262144 -1 -1 2;
+#X obj 280 175 hradio 15 1 0 3 block-3 block-3-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 350 175 tgl 15 0 2x-3 2x-3-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 271 46 blocksize;
+#X text 28 46 callname;
+#X text 237 259 fdch.github.io/Quack4;
+#X text 231 245 A quacktrip v0.5 plugin;
+#X obj 155 255 bng 15 250 50 0 recall recall-set empty 17 7 0 10 -262144
+-1 -1;
+#X text 85 200 server;
+#X text 27 132 2:;
+#X text 27 92 1:;
+#X text 27 172 3:;
+#X obj 347 296 loadbang;
+#X obj 347 348 s pd;
+#X msg 347 322 dsp 1;
+#X text 25 203 start;
+#X text 105 255 store;
+#X text 173 254 recall;
+#X connect 45 0 47 0;
+#X connect 47 0 46 0;
+#X coords 0 -1 1 1 360 260 1 20 20;
