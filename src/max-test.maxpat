@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 0,
+			"minor" : 1,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,43 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 392.0, 336.0, 57.0, 35.0 ],
+					"text" : ";\rdsp start"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 392.0, 299.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 101.0, 141.0, 31.0, 22.0 ],
+					"text" : "plug"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
@@ -169,7 +206,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
 					"patching_rect" : [ 125.0, 272.0, 101.0, 22.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, "Quack4.vst3", ";" ],
+					"save" : [ "#N", "vst~", "loaduniqueid", 0, ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -197,12 +234,12 @@
 						"snapshot" : 						{
 							"pluginname" : "Quack4.vst3",
 							"plugindisplayname" : "Quack4",
-							"pluginsavedname" : "Quack4",
+							"pluginsavedname" : "~/Documents/Quack4/build/Quack4.vst3",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "0."
+							"blob" : "461.VMjLgPb....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9HSNw3hUMczXWEjKt3hYt3hKt.kKt3hKt3BS5gEcyQjKtPjcBYTR5AkaA4hKtfDThMUUGkkKD4hKF4hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKtvTaUMTRSgDct3hKtXWdPcFLwD1bqYTXq0TUYoWTWoEciEiX4X2PhcVRWg0bMIyR4XWdKMTQVEVcvXkVxUULTsVTGM1azDSV4QyPt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9.."
 						}
 ,
 						"snapshotlist" : 						{
@@ -213,26 +250,26 @@
 									"minorversion" : 0,
 									"name" : "Quack4",
 									"origin" : "Quack4.vst3",
-									"type" : "AudioUnit",
-									"subtype" : "MidiEffect",
+									"type" : "VST3",
+									"subtype" : "AudioEffect",
 									"embed" : 0,
 									"snapshot" : 									{
 										"pluginname" : "Quack4.vst3",
 										"plugindisplayname" : "Quack4",
-										"pluginsavedname" : "Quack4",
+										"pluginsavedname" : "~/Documents/Quack4/build/Quack4.vst3",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "0."
+										"blob" : "461.VMjLgPb....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9HSNw3hUMczXWEjKt3hYt3hKt.kKt3hKt3BS5gEcyQjKtPjcBYTR5AkaA4hKtfDThMUUGkkKD4hKF4hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKtvTaUMTRSgDct3hKtXWdPcFLwD1bqYTXq0TUYoWTWoEciEiX4X2PhcVRWg0bMIyR4XWdKMTQVEVcvXkVxUULTsVTGM1azDSV4QyPt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9.."
 									}
 ,
 									"fileref" : 									{
 										"name" : "Quack4",
-										"filename" : "Quack4.maxsnap",
+										"filename" : "Quack4_20200723.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "dec3973d3f8a3bea96c2b47599ffe67b"
+										"snapshotfileid" : "835d23cc4fa66d8b035cd00ef8ba81ea"
 									}
 
 								}
@@ -241,7 +278,7 @@
 
 					}
 ,
-					"text" : "vst~ Quack4.vst3",
+					"text" : "vst~",
 					"varname" : "vst~",
 					"viewvisibility" : 0
 				}
@@ -353,6 +390,20 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -367,9 +418,9 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "Quack4.maxsnap",
+				"name" : "Quack4_20200723.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../Max 8/Snapshots",
+				"patcherrelativepath" : "../../Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
