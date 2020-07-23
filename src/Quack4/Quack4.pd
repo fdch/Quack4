@@ -1,0 +1,99 @@
+#N canvas 527 49 531 428 10;
+#X symbolatom 89 225 32 0 0 2 - server-set server;
+#X symbolatom 57 93 10 0 0 2 - call-name-1-set call-name-1;
+#X symbolatom 57 113 10 0 0 2 - call-name-2-set call-name-2;
+#X obj 14 191 tgl 50 0 onoff onoff-set empty 35 15 0 12 -204786 -1
+-1 0 1;
+#X obj 144 113 tgl 15 0 status-2 status-2-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 167 113 nbx 3 15 0 999 0 0 call-2-fifo call-2-fifo-set empty
+0 -8 0 12 -262144 -1 -1 50 256;
+#X obj 144 93 tgl 15 0 status-1 status-1-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 167 93 nbx 3 15 0 999 0 0 call-1-fifo call-1-fifo-set empty
+0 -8 0 12 -262144 -1 -1 50 256;
+#X symbolatom 57 133 10 0 0 2 - call-name-3-set call-name-3;
+#X obj 144 133 tgl 15 0 status-3 status-3-set empty 17 7 0 10 -204800
+-1 -1 0 1;
+#X obj 167 133 nbx 3 15 0 999 0 0 call-3-fifo call-3-fifo-set empty
+0 -8 0 12 -262144 -1 -1 50 256;
+#X obj 124 93 bng 15 250 50 0 call-1-found call-1-found-set empty 17
+7 0 10 -262144 -1 -1;
+#X obj 124 113 bng 15 250 50 0 call-2-found call-2-found-set empty
+17 7 0 10 -262144 -1 -1;
+#X obj 124 133 bng 15 250 50 0 call-3-found call-3-found-set empty
+17 7 0 10 -262144 -1 -1;
+#X text 121 68 status;
+#X text 170 68 fifo;
+#X obj 218 93 hradio 15 1 0 3 nchan-1 nchan-1-set empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 277 93 hradio 15 1 0 3 block-1 block-1-set empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 337 93 tgl 15 0 2x-1 2x-1-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 223 68 chnls;
+#X text 334 68 2X;
+#X text 222 54 0|1|2;
+#X text 269 54 64|128|256;
+#X obj 218 113 hradio 15 1 0 3 nchan-2 nchan-2-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 277 113 hradio 15 1 0 3 block-2 block-2-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 337 113 tgl 15 0 2x-2 2x-2-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 218 133 hradio 15 1 0 3 nchan-3 nchan-3-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 277 133 hradio 15 1 0 3 block-3 block-3-set empty 0 -8 0 10
+-262144 -1 -1 0;
+#X obj 337 133 tgl 15 0 2x-3 2x-3-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 55 68 callname;
+#X text 107 28 fdch.github.io/Quack4;
+#X text 101 10 A quacktrip v0.5 plugin;
+#X text 88 204 server;
+#X text 15 112 2:;
+#X text 15 92 1:;
+#X text 15 132 3:;
+#X text 13 168 start;
+#X text 283 68 block;
+#X obj 36 93 tgl 15 0 call-1-onoff call-1-onoff-set empty 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 36 113 tgl 15 0 call-2-onoff call-2-onoff-set empty 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 36 133 tgl 15 0 call-3-onoff call-3-onoff-set empty 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 110 321 s server-set;
+#X obj 6 276 loadbang;
+#X obj 110 275 r onoff;
+#X obj 110 297 sel 1;
+#X text 14 68 onoff;
+#X obj 371 93 quack2~ 1 1 2;
+#X obj 371 113 quack2~ 2 3 4;
+#X obj 371 133 quack2~ 3 5 6;
+#X floatatom 291 225 5 0 0 0 - port-set port;
+#X text 289 204 port;
+#X msg 228 318 \; port-set 3840 \; server-set symbol 54.197.114.92
+;
+#X msg 213 364 \; port-set 3840 \; server-set symbol foo.ucsd.edu;
+#X obj 68 211 vradio 15 1 0 2 srv srv-set empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 213 275 r srv;
+#X obj 213 297 sel;
+#X msg 6 302 line 0 \, auto \; pd dsp 1;
+#X obj 6 359 text sequence names -g;
+#X obj 6 381 text define -k names;
+#A set call-name-1-set symbol q1 \; call-name-2-set symbol q2 \; call-name-3-set
+symbol q3 \; call-1-fifo-set float 50 \; call-2-fifo-set float 50 \;
+call-3-fifo-set float 50 \; nchan-1-set float 0 \; nchan-2-set float
+0 \; nchan-3-set float 0 \; block-3-set float 0 \; block-2-set float
+0 \; block-1-set float 0 \; 2x-1-set float 0 \; 2x-2-set float 0 \;
+2x-3-set float 0 \; port-set float 3840 \; server-set symbol foo.ucsd.edu
+\;;
+#X connect 42 0 56 0;
+#X connect 43 0 44 0;
+#X connect 44 0 41 0;
+#X connect 54 0 55 0;
+#X connect 55 0 52 0;
+#X connect 55 1 51 0;
+#X connect 56 0 57 0;
+#X coords 0 -1 1 1 360 260 1 2 2;

@@ -1,4 +1,0 @@
-A Quacktrip plugin that handles a 3 way connection.
-
-Version: 1.0
-Author: ffddcchh
