@@ -1,4 +1,4 @@
-#N canvas 111 0 797 542 12;
+#N canvas 69 236 797 542 12;
 #X declare -path lib;
 #X obj 30 23 declare -path lib;
 #X obj 30 126 quack-panel \$1;
@@ -65,7 +65,7 @@ symbol;
 #X connect 9 0 2 0;
 #X connect 9 1 1 0;
 #X restore 360 342 pd quack-\$1-out;
-#X obj 358 96 quack.test \$1 \$2;
+#X obj 358 96 quack.test \$1 \$2 \$3;
 #X connect 1 0 6 0;
 #X connect 1 1 6 1;
 #X connect 2 0 1 0;

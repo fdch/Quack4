@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>A plugin that loads Pure Data patches</string>
+			<key>factoryFunction</key>
+			<string>CamomileFxAUFactory</string>
+			<key>manufacturer</key>
+			<string>PIGU</string>
+			<key>name</key>
+			<string>Fede Camara Halac: Quack4</string>
+			<key>subtype</key>
+			<string>qSud</string>
+			<key>type</key>
+			<string>aumf</string>
+			<key>version</key>
+			<integer>65542</integer>
+		</dict>
+	</array>
+	<key>BuildMachineOSBuild</key>
+	<string>16G29</string>
+	<key>CFBundleDisplayName</key>
+	<string>Quack4</string>
+	<key>CFBundleExecutable</key>
+	<string>CamomileFx</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.pierreguillot.camomile</string>
+	<key>CFBundleName</key>
+	<string>Quack4</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.6</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.6</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8E3004b</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16E185</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12</string>
+	<key>DTXcode</key>
+	<string>0833</string>
+	<key>DTXcodeBuild</key>
+	<string>8E3004b</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>Pierre Guillot</string>
+</dict>
+</plist>

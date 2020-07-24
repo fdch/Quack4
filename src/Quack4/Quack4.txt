@@ -1,4 +1,4 @@
 type effect;
-iolayout 6 6;
+iolayout 2 2;
 code qSud;
 description Infos.txt;

@@ -39,6 +39,17 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 205.0, 406.0, 81.5, 22.0 ],
+					"text" : "dac~"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -196,17 +207,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 148.0, 421.0, 81.5, 22.0 ],
-					"text" : "dac~"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -237,12 +237,12 @@
 					"clickthrough" : 0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 6,
-					"numoutlets" : 12,
+					"numinlets" : 2,
+					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "", "list", "int", "", "", "" ],
+					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
 					"patching_rect" : [ 152.0, 316.0, 134.5, 22.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, 6, 6, ";" ],
+					"save" : [ "#N", "vst~", "loaduniqueid", 0, ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -270,7 +270,7 @@
 						"snapshot" : 						{
 							"pluginname" : "Quack4.vst3",
 							"plugindisplayname" : "Quack4",
-							"pluginsavedname" : "~/Documents/Quack4/build/Quack4.vst3",
+							"pluginsavedname" : "~/Documents/Quack4/builds/Quack4.vst3",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
@@ -287,12 +287,12 @@
 									"name" : "Quack4",
 									"origin" : "Quack4.vst3",
 									"type" : "VST3",
-									"subtype" : "AudioEffect",
+									"subtype" : "MidiEffect",
 									"embed" : 0,
 									"snapshot" : 									{
 										"pluginname" : "Quack4.vst3",
 										"plugindisplayname" : "Quack4",
-										"pluginsavedname" : "~/Documents/Quack4/build/Quack4.vst3",
+										"pluginsavedname" : "~/Documents/Quack4/builds/Quack4.vst3",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
@@ -314,7 +314,7 @@
 
 					}
 ,
-					"text" : "vst~ 6 6",
+					"text" : "vst~",
 					"varname" : "vst~",
 					"viewvisibility" : 0
 				}
@@ -323,42 +323,14 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
-					"source" : [ "obj-1", 5 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"source" : [ "obj-1", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
-					"source" : [ "obj-1", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"source" : [ "obj-1", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
+					"destination" : [ "obj-2", 1 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -395,24 +367,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 4 ],
-					"order" : 0,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 2 ],
-					"order" : 1,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"order" : 2,
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -498,24 +453,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 5 ],
-					"order" : 0,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 3 ],
-					"order" : 1,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
-					"order" : 2,
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -529,14 +467,7 @@
 
 		}
 ,
-		"dependency_cache" : [ 			{
-				"name" : "Quack4_20200723.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
