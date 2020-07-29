@@ -56,7 +56,7 @@
 #X text 15 132 3:;
 #X text 283 68 block;
 #X obj 36 93 tgl 15 0 call-1-onoff call-1-onoff-set empty 17 7 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1 1;
 #X obj 36 113 tgl 15 0 call-2-onoff call-2-onoff-set empty 17 7 0 10
 -262144 -1 -1 0 1;
 #X obj 36 133 tgl 15 0 call-3-onoff call-3-onoff-set empty 17 7 0 10
@@ -66,9 +66,9 @@
 #X text 289 204 port;
 #X obj 68 211 vradio 15 1 0 2 srv srv-set empty 0 -8 0 10 -262144 -1
 -1 0;
-#X obj 35 225 tgl 15 0 test test-set empty 17 7 0 10 -262144 -1 -1
-1 1;
-#X text 30 203 test;
+#X obj 13 226 tgl 15 0 test test-set empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 6 204 test;
 #N canvas 0 22 450 300 guts 0;
 #X obj 134 74 s server-set;
 #X obj 30 29 loadbang;
@@ -98,4 +98,8 @@ call-3-fifo-set float 50 \; nchan-1-set float 2 \; nchan-2-set float
 #X connect 8 0 9 0;
 #X restore 316 267 pd guts;
 #X text 8 71 all:;
+#X obj 43 226 tgl 15 0 test-send test-send-set empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 36 204 send;
+#X text 36 195 test;
 #X coords 0 -1 1 1 360 260 1 2 2;
