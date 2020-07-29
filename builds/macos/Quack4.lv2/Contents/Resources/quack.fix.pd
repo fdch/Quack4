@@ -31,6 +31,9 @@
 #X obj 159 349 r \$1-call-name;
 #X obj 21 110 route port;
 #X obj 121 83 route server call-name onoff block nchan 2x fifo;
+#X obj 365 278 loadbang;
+#X msg 365 304 port 3840;
+#X obj 365 330 s quack-\$2-in;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 22 0 30 0;
@@ -51,3 +54,5 @@
 #X connect 31 4 6 0;
 #X connect 31 5 7 0;
 #X connect 31 6 8 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
