@@ -1,4 +1,4 @@
-#N canvas 527 49 369 290 10;
+#N canvas 527 49 517 577 10;
 #X symbolatom 89 225 32 0 0 2 - server-set server;
 #X symbolatom 57 93 10 0 0 2 - call-name-1-set call-name-1;
 #X symbolatom 57 113 10 0 0 2 - call-name-2-set call-name-2;
@@ -56,7 +56,7 @@
 #X text 15 132 3:;
 #X text 283 68 block;
 #X obj 36 93 tgl 15 0 call-1-onoff call-1-onoff-set empty 17 7 0 10
--262144 -1 -1 1 1;
+-262144 -1 -1 0 1;
 #X obj 36 113 tgl 15 0 call-2-onoff call-2-onoff-set empty 17 7 0 10
 -262144 -1 -1 0 1;
 #X obj 36 133 tgl 15 0 call-3-onoff call-3-onoff-set empty 17 7 0 10
@@ -69,18 +69,23 @@
 #X obj 13 226 tgl 15 0 test test-set empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X text 6 204 test;
-#N canvas 0 22 450 300 guts 0;
-#X obj 134 74 s server-set;
-#X obj 30 29 loadbang;
-#X obj 134 28 r onoff;
-#X obj 134 50 sel 1;
-#X msg 227 70 \; port-set 3840 \; server-set symbol 54.197.114.92;
-#X msg 212 116 \; port-set 3840 \; server-set symbol foo.ucsd.edu;
-#X obj 212 27 r srv;
-#X obj 212 49 sel;
-#X msg 30 55 line 0 \, auto \; pd dsp 1;
-#X obj 30 112 text sequence names -g;
-#X obj 30 134 text define -k names;
+#X text 8 71 all:;
+#X obj 43 226 tgl 15 0 test-send test-send-set empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 36 204 send;
+#X text 36 195 test;
+#X obj 239 484 s server-set;
+#X obj 20 273 loadbang;
+#X obj 239 438 r onoff;
+#X obj 239 460 sel 1;
+#X msg 250 319 \; port-set 3840 \; server-set symbol 54.197.114.92
+;
+#X msg 235 365 \; port-set 3840 \; server-set symbol foo.ucsd.edu;
+#X obj 235 276 r srv;
+#X obj 235 298 sel;
+#X msg 20 299 line 0 \, auto \; pd dsp 1;
+#X obj 20 336 text sequence names -g;
+#X obj 19 378 text define -k names;
 #A set call-name-1-set symbol q1 \; call-name-2-set symbol q2 \; call-name-3-set
 symbol q3 \; call-1-fifo-set float 50 \; call-2-fifo-set float 50 \;
 call-3-fifo-set float 50 \; nchan-1-set float 2 \; nchan-2-set float
@@ -88,18 +93,18 @@ call-3-fifo-set float 50 \; nchan-1-set float 2 \; nchan-2-set float
 0 \; block-1-set float 0 \; 2x-1-set float 0 \; 2x-2-set float 0 \;
 2x-3-set float 0 \; port-set float 3840 \; server-set symbol foo.ucsd.edu
 \;;
-#X obj 34 167 clone -s 1 quack2~ 3 1 2;
-#X connect 1 0 8 0;
-#X connect 2 0 3 0;
-#X connect 3 0 0 0;
-#X connect 6 0 7 0;
-#X connect 7 0 5 0;
-#X connect 7 1 4 0;
-#X connect 8 0 9 0;
-#X restore 316 267 pd guts;
-#X text 8 71 all:;
-#X obj 43 226 tgl 15 0 test-send test-send-set empty 17 7 0 10 -262144
--1 -1 0 1;
-#X text 36 204 send;
-#X text 36 195 test;
+#X obj 22 457 clone -s 1 quack2~ 3 1 2;
+#X obj 22 415 adc~;
+#X obj 22 505 dac~;
+#X connect 51 0 58 0;
+#X connect 52 0 53 0;
+#X connect 53 0 50 0;
+#X connect 56 0 57 0;
+#X connect 57 0 55 0;
+#X connect 57 1 54 0;
+#X connect 58 0 59 0;
+#X connect 61 0 63 0;
+#X connect 61 1 63 1;
+#X connect 62 0 61 0;
+#X connect 62 1 61 1;
 #X coords 0 -1 1 1 360 260 1 2 2;
