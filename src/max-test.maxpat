@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 504.0, 146.0, 640.0, 480.0 ],
+		"rect" : [ 245.0, 74.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,11 +39,45 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 339.0, 244.0, 49.0, 22.0 ],
+					"text" : "params"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 221.300000000000011, 420.0, 80.0, 13.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 241.5, 398.0, 80.0, 13.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 205.0, 406.0, 81.5, 22.0 ],
+					"patching_rect" : [ 67.0, 438.0, 81.5, 22.0 ],
 					"text" : "dac~"
 				}
 
@@ -91,7 +125,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 280.0, 216.0, 49.0, 22.0 ],
+					"patching_rect" : [ 297.0, 179.0, 49.0, 22.0 ],
 					"text" : "*~ 0.01"
 				}
 
@@ -140,7 +174,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 324.0, 179.0, 40.0, 22.0 ],
+					"patching_rect" : [ 358.0, 137.0, 40.0, 22.0 ],
 					"text" : "* 0.01"
 				}
 
@@ -153,7 +187,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 269.5, 85.0, 24.0, 24.0 ]
+					"patching_rect" : [ 349.5, 24.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -164,7 +198,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 280.0, 179.0, 31.5, 22.0 ],
+					"patching_rect" : [ 252.75, 121.0, 31.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -176,7 +210,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 348.0, 151.0, 78.0, 22.0 ],
+					"patching_rect" : [ 274.5, 86.0, 78.0, 22.0 ],
 					"text" : "lores~ 20 0.9"
 				}
 
@@ -188,7 +222,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 348.0, 115.0, 76.0, 22.0 ],
+					"patching_rect" : [ 274.5, 60.0, 76.0, 22.0 ],
 					"text" : "phasor~ -0.4"
 				}
 
@@ -200,7 +234,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 280.0, 127.0, 66.0, 22.0 ],
+					"patching_rect" : [ 235.299999999999955, 24.0, 66.0, 22.0 ],
 					"text" : "cycle~ 440"
 				}
 
@@ -268,14 +302,14 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
-							"pluginname" : "Quack4.vst3",
+							"pluginname" : "Quack4.vst",
 							"plugindisplayname" : "Quack4",
-							"pluginsavedname" : "~/Documents/Quack4/builds/Quack4.vst3",
+							"pluginsavedname" : "~/Documents/Quack4/builds/macos/Quack4.vst",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "461.VMjLgPb....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9HSNw3hUMczXWEjKt3hYt3hKt.kKt3hKt3BS5gEcyQjKtPjcBYTR5AkaA4hKtfDThMUUGkkKD4hKF4hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKtvTaUMTRSgDct3hKtXWdPcFLwD1bqYTXq0TUYoWTWoEciEiX4X2PhcVRWg0bMIyR4XWdKMTQVEVcvXkVxUULTsVTGM1azDSV4QyPt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9.."
+							"blob" : "115.CMlaKA....fQPMDZ....AD2T0QF.A.fA....A.........................................vMVMjLg3B....OCEVau0VZrU1TkQGco41Yy4COvElbg01bu3COuLTXs8VaowVYSUFczklamMmO.."
 						}
 ,
 						"snapshotlist" : 						{
@@ -285,27 +319,27 @@
 									"version" : 2,
 									"minorversion" : 0,
 									"name" : "Quack4",
-									"origin" : "Quack4.vst3",
-									"type" : "VST3",
+									"origin" : "Quack4.vst",
+									"type" : "VST",
 									"subtype" : "MidiEffect",
 									"embed" : 0,
 									"snapshot" : 									{
-										"pluginname" : "Quack4.vst3",
+										"pluginname" : "Quack4.vst",
 										"plugindisplayname" : "Quack4",
-										"pluginsavedname" : "~/Documents/Quack4/builds/Quack4.vst3",
+										"pluginsavedname" : "~/Documents/Quack4/builds/macos/Quack4.vst",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "461.VMjLgPb....OVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9HSNw3hUMczXWEjKt3hYt3hKt.kKt3hKt3BS5gEcyQjKtPjcBYTR5AkaA4hKtfDThMUUGkkKD4hKF4hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKt3hKtvTaUMTRSgDct3hKtXWdPcFLwD1bqYTXq0TUYoWTWoEciEiX4X2PhcVRWg0bMIyR4XWdKMTQVEVcvXkVxUULTsVTGM1azDSV4QyPt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9.."
+										"blob" : "115.CMlaKA....fQPMDZ....AD2T0QF.A.fA....A.........................................vMVMjLg3B....OCEVau0VZrU1TkQGco41Yy4COvElbg01bu3COuLTXs8VaowVYSUFczklamMmO.."
 									}
 ,
 									"fileref" : 									{
 										"name" : "Quack4",
-										"filename" : "Quack4_20200723.maxsnap",
+										"filename" : "Quack4_20200724.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "835d23cc4fa66d8b035cd00ef8ba81ea"
+										"snapshotfileid" : "12e35704fe570826d1404a2bc0b2d35e"
 									}
 
 								}
@@ -324,6 +358,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
+					"order" : 1,
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -331,6 +366,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"order" : 0,
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -362,6 +414,13 @@
 					"destination" : [ "obj-9", 1 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -467,7 +526,14 @@
 
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "Quack4_20200724.maxsnap",
+				"bootpath" : "~/Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../Max 8/Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 
