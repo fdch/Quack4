@@ -93,7 +93,8 @@ call-3-fifo-set float 20 \; nchan-1-set float 2 \; nchan-2-set float
 float 20 \; call-5-fifo-set float 20 \; call-4-fifo-set float 20 \;
 nchan-4-set float 2 \; nchan-5-set float 2 \; nchan-6-set float 2 \;
 block-4-set float 0 \; block-5-set float 0 \; block-6-set float 0 \;
-2x-6-set float 0 \; 2x-5-set float 0 \; 2x-4-set float 0 \;;
+2x-6-set float 0 \; 2x-5-set float 0 \; 2x-4-set float 0 \; call-name-6-set
+symbol q6 \;;
 #X obj 22 415 adc~;
 #X obj 22 505 dac~;
 #X msg 230 519 \; server-set symbol 192.168.100.5;
@@ -127,7 +128,7 @@ block-4-set float 0 \; block-5-set float 0 \; block-6-set float 0 \;
 0 1;
 #X obj 36 163 tgl 15 0 call-5-onoff call-5-onoff-set empty 17 7 0 10
 -262144 -1 -1 0 1;
-#X symbolatom 57 183 10 0 0 2 - call-name-3-set call-name-3;
+#X symbolatom 57 183 10 0 0 2 - call-name-6-set call-name-6;
 #X obj 144 183 tgl 15 0 status-6 status-6-set empty 17 7 0 10 -204800
 -1 -1 0 1;
 #X obj 167 183 nbx 3 15 0 999 0 0 call-6-fifo call-6-fifo-set empty
