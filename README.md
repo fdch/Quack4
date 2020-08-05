@@ -8,6 +8,8 @@ Author: ffddcchh
 
 made with Camomile
 
+Based on [quacktrip](http://msp.ucsd.edu/tools/quacktrip/) by Miller Puckette.
+
 Many thanks to Miller Puckette and the Pure Data team, 
 Marc Ainger for testing and support, 
 and Pierre Guillot for Camomile.
