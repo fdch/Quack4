@@ -7,3 +7,5 @@ Version: 1.0
 Author: ffddcchh
 
 made with Camomile
+
+Based on [quacktrip](http://msp.ucsd.edu/tools/quacktrip/) by Miller Puckette.
