@@ -7,3 +7,7 @@ Version: 1.0
 Author: ffddcchh
 
 made with Camomile
+
+Many thanks to Miller Puckette and the Pure Data team, 
+Marc Ainger for testing and support, 
+and Pierre Guillot for Camomile.
