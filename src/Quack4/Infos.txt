@@ -1,4 +1,4 @@
-A quacktrip v0.5 plugin that handles a 3 way connection.
+A quacktrip v0.5 plugin that handles a 3 way connection. See README.md for instructions.
 
-Version: 1.0
+Version: 1.6
 Author: ffddcchh

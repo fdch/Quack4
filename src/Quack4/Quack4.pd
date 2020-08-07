@@ -1,4 +1,4 @@
-#N canvas 527 49 517 577 10;
+#N canvas 527 49 608 577 10;
 #X symbolatom 89 237 38 0 0 2 - server-set server;
 #X symbolatom 57 83 10 0 0 2 - call-name-1-set call-name-1;
 #X symbolatom 57 103 10 0 0 2 - call-name-2-set call-name-2;
@@ -65,7 +65,7 @@
 #X floatatom 324 237 5 0 0 0 - port-set port;
 #X text 322 219 port;
 #X obj 68 223 vradio 15 1 0 2 srv srv-set empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 13 238 tgl 15 0 get get-set empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 8 61 all:;
@@ -75,8 +75,6 @@
 #X obj 20 273 loadbang;
 #X obj 239 438 r onoff;
 #X obj 239 460 sel 1;
-#X msg 250 319 \; port-set 3840 \; server-set symbol 54.197.114.92
-;
 #X msg 235 365 \; port-set 3840 \; server-set symbol foo.ucsd.edu;
 #X obj 235 276 r srv;
 #X obj 235 298 sel;
@@ -88,7 +86,7 @@ symbol q3 \; call-1-fifo-set float 20 \; call-2-fifo-set float 20 \;
 call-3-fifo-set float 20 \; nchan-1-set float 2 \; nchan-2-set float
 2 \; nchan-3-set float 2 \; block-3-set float 0 \; block-2-set float
 0 \; block-1-set float 0 \; 2x-1-set float 0 \; 2x-2-set float 0 \;
-2x-3-set float 0 \; port-set float 3840 \; server-set symbol foo.ucsd.edu
+2x-3-set float 0 \; port-set float 3840 \; server-set symbol acd-miraweb.asc.ohio-state.edu
 \; call-name-4-set symbol q4 \; call-name-5-set symbol q5 \; call-6-fifo-set
 float 20 \; call-5-fifo-set float 20 \; call-4-fifo-set float 20 \;
 nchan-4-set float 2 \; nchan-5-set float 2 \; nchan-6-set float 2 \;
@@ -149,15 +147,17 @@ symbol q6 \;;
 #X text 15 162 5:;
 #X text 15 182 6:;
 #X obj 22 457 clone -s 1 quack2~ 6 1 2;
-#X connect 48 0 55 0;
+#X msg 249 319 \; port-set 3840 \; server-set symbol acd-audio.asc.ohio-state.edu
+;
+#X connect 48 0 54 0;
 #X connect 49 0 50 0;
 #X connect 50 0 47 0;
-#X connect 53 0 54 0;
-#X connect 54 0 52 0;
-#X connect 54 1 51 0;
-#X connect 55 0 56 0;
-#X connect 58 0 90 0;
-#X connect 58 1 90 1;
-#X connect 90 0 59 0;
-#X connect 90 1 59 1;
+#X connect 52 0 53 0;
+#X connect 53 0 51 0;
+#X connect 53 1 90 0;
+#X connect 54 0 55 0;
+#X connect 57 0 89 0;
+#X connect 57 1 89 1;
+#X connect 89 0 58 0;
+#X connect 89 1 58 1;
 #X coords 0 -1 1 1 360 260 1 2 2;
