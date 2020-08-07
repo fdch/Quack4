@@ -1,5 +1,7 @@
 # Quack4
 
+![Quack4](Quack4.png)
+
 A quacktrip v0.5 plugin that handles a 3 way connection.
 Head to the [releases](https://github.com/fdch/Quack4/releases) pages to get the builds.
 
@@ -97,12 +99,19 @@ you can add / change the port number of another server
 
 ## modo de uso
 
+### una llamada
+
 - este sistema se maneja con "llamadas" que se realizan entre dos personas a la vez
-- cada llamada debe tener un nombre único conocido por las dos personas que se comunican
-- se pueden realizar hasta 6 llamadas simultáneas (siempre entre una persona y 6 otras personas en IPs distintas)
+- la llamada debe tener un nombre único elegido por las dos personas que se comunican
+- este nombre deben ingresarlo en el campo `call-name`
+- es importatísimo reemplazar el nombre `q1` (o `q2`, `q3`, etc) por el nombre acordado entre ambas personas
+- luego, apretar el toggle blanco de la izquierda para iniciar la llamada.
+
+### múltiples llamadas
+
 - cada hilera se corresponde a una llamada
-- el nombre de la llamada deben ingresarlo en el campo "call-name" reemplazando el nombre "q1" (o "q2", "q3", etc) por el nombre acordado entre ambas personas
-- luego de ingesar el nombre de la llamada, se inicia la llamada haciendo click en el toggle blanco de la izquierda correspondiente a la llamada
+- se pueden realizar hasta 6 llamadas simultáneas
+- las llamadas son siempre entre una persona y otras 6 personas (en IPs distintas)
 
 ## controles de cada llamada
 
